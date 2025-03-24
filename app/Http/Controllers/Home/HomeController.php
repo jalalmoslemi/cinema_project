@@ -11,7 +11,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        \Log::info('user', ['user' => Auth::user()]);
         return Inertia::render('home/page');
     }
 }
