@@ -2,8 +2,16 @@
 
 use App\Http\Controllers\User\AuthController;
 
-Route::get('/register', [AuthController::class, 'registerWeb']);
-Route::post('/register', [AuthController::class, 'register']);
+
+Route::middleware('guest')
+    ->group(function () {
+        Route::get('/register', [AuthController::class, 'registerWeb']);
+        Route::post('/register', [AuthController::class, 'register']);
+
+        Route::get('/login', [AuthController::class, 'loginWeb'])
+            ->name('login');
+        Route::post('/login', [AuthController::class, 'login']);
+    });
 
 Route::middleware('auth')
     ->group(function () {
