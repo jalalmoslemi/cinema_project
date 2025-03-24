@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cinema</title>
 
+    @viteReactRefresh
     @vite('resources/js/app.tsx')
     @inertiaHead
 </head>
