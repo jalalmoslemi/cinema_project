@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+
+@font-face {
+  font-family: 'iransansx';
+  src: url('../assets/fonts/iransansx/IRANSansX-Medium.woff2') format('woff');
+}
+* {
+  direction: rtl;
+  text-align: right;
+}
+
+body {
+  font-family: 'iransansx';
+}
