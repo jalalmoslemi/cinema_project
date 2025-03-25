@@ -1,5 +1,6 @@
 import { SharedData } from '@/types/inertia';
 import { Link, usePage } from '@inertiajs/react';
+import UserInfo from './UserInfo';
 
 function Navbar() {
   const {
@@ -7,7 +8,7 @@ function Navbar() {
   } = usePage<SharedData>();
 
   return (
-    <nav className="flex py-2 px-4 border-b border-b-zinc-200">
+    <nav className="flex py-4 px-8 border-b border-b-zinc-200">
       <div>
         <Link href="/">خانه</Link>
       </div>
@@ -19,9 +20,9 @@ function Navbar() {
       </ul>
 
       {auth && (
-        <ul className="flex mr-auto gap-x-4">
+        <ul className="flex mr-auto gap-x-6">
           <li>
-            <span className="text-blue-700">{auth.name}</span>
+            <UserInfo />
           </li>
           <li>
             <Link href="/logout">خروج</Link>

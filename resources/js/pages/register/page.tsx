@@ -45,7 +45,10 @@ function RegisterPage() {
 
           <div className="flex flex-col mt-2">
             <label htmlFor="">رمز</label>
-            <Input onChange={e => setData('password', e.target.value)} />
+            <Input
+              onChange={e => setData('password', e.target.value)}
+              type="password"
+            />
             {errors.password && (
               <p className="text-red-500 text-sm">{errors.password}</p>
             )}
