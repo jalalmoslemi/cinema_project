@@ -12,7 +12,9 @@ function Layout({ childern }: Props) {
         <Navbar />
       </header>
       <main className="grow">{childern}</main>
-      <footer>this is footer</footer>
+      <footer className="py-2 px-4 border-t border-zinc-300">
+        this is footer
+      </footer>
     </div>
   );
 }
